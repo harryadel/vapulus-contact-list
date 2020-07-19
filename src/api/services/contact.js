@@ -218,7 +218,6 @@ module.exports.findSharedUserContacts = async (options) => {
     .filter({ fingerPrint: options.body.associatedUserFingerPrint })
     .value();
 
-  console.log("ASS: ", associatedUserContacts);
   const contacts = intersectionBy(
     authenticatedUserContacts,
     associatedUserContacts,

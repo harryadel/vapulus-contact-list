@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "1e27fb6d-0bd2-451f-9e32-50cd7aaf82fc",
+		"name": "Contact List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add New Contacts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"authorization\":\n        \"ff34555392bcd3f268f74d29daf1f819336616f115a38f73318354b374763b05079c0ab18f68\",\n      \"deviceToken\":\n        \"10b0c968654b27e0701ad2bf5772d1cdcffe8ea8149cd6506e3ffd35c8e36c6bcfe64116e47a217ae6b1f8cb908e067ae108c14f0077424712195aebf39c8cb747b7811891e201e1\",\n      \"fingerPrint\": \"123456789\",\n      \"email\": \"harryadelb@gmail.com\",\n      \"mobile\": \"01026971906\",\n      \"firstName\": \"Harry\",\n      \"lastName\": \"Adel\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/contacts/addContact",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts",
+						"addContact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All User Contacts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"authorization\":\n        \"ff34555392bcd3f268f74d29daf1f819336616f115a38f73318354b374763b05079c0ab18f68\",\n      \"deviceToken\":\n        \"10b0c968654b27e0701ad2bf5772d1cdcffe8ea8149cd6506e3ffd35c8e36c6bcfe64116e47a217ae6b1f8cb908e067ae108c14f0077424712195aebf39c8cb747b7811891e201e1\",\n      \"fingerPrint\": \"123456789\",\n      \"pageNum\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/contacts/getList",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts",
+						"getList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recent Contacts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"authorization\":\n        \"ff34555392bcd3f268f74d29daf1f819336616f115a38f73318354b374763b05079c0ab18f68\",\n      \"deviceToken\":\n        \"10b0c968654b27e0701ad2bf5772d1cdcffe8ea8149cd6506e3ffd35c8e36c6bcfe64116e47a217ae6b1f8cb908e067ae108c14f0077424712195aebf39c8cb747b7811891e201e1\",\n      \"fingerPrint\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/contacts/getRecentList",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts",
+						"getRecentList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shared Contacts Between Two Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"authorization\":\n        \"ff34555392bcd3f268f74d29daf1f819336616f115a38f73318354b374763b05079c0ab18f68\",\n      \"deviceToken\":\n        \"10b0c968654b27e0701ad2bf5772d1cdcffe8ea8149cd6506e3ffd35c8e36c6bcfe64116e47a217ae6b1f8cb908e067ae108c14f0077424712195aebf39c8cb747b7811891e201e1\",\n      \"fingerPrint\": \"123456789\",\n      \"associatedUserFingerPrint\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/contacts/getSharedContacts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contacts",
+						"getSharedContacts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
