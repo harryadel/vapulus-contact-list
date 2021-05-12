@@ -26,7 +26,7 @@
     "lowdb": "^1.0.0",
     "node-yaml-config": "0.0.6",
     "shortid": "^2.2.15",
-    "simpl-schema": "^1.8.1"
+    "simpl-schema": "^1.10.2"
   },
   "devDependencies": {
     "faker": "^4.1.0",
